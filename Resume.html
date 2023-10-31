@@ -5,6 +5,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        /* Center the "Download Resume" link */
+        .download-link {
+            text-align: center;
+        }
+        /* Style the embedded PDF viewer to remove side panel */
+        #pdf-viewer {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+        }
+    </style>
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
 <body class="is-preload">
@@ -32,10 +43,10 @@
             <!-- Resume section is now the first thing users see when they click on the "Resume" tab -->
             <section>
                 <h2>Resume</h2>
-                <!-- Embedded PDF viewer -->
-                <iframe src="assets/documents/Weiler_Stephanie_Resume.pdf" style="width: 100%; height: 500px;"></iframe>
-                <!-- Download link -->
-                <p><a href="assets/documents/Weiler_Stephanie_Resume.pdf" download>Download Resume (PDF)</a></p>
+                <!-- Embedded PDF viewer without side panel -->
+                <iframe id="pdf-viewer" src="assets/documents/Weiler_Stephanie_Resume.pdf"></iframe>
+                <!-- Centered "Download Resume" link -->
+                <p class="download-link"><a href="assets/documents/Weiler_Stephanie_Resume.pdf" download>Download Resume (PDF)</a></p>
             </section>
             <!-- Contact Info -->
             <section class="split contact">
